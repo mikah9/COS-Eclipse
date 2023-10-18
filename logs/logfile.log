@@ -1,0 +1,16 @@
+[11:41:02] INFO BEProgMissionLogger | ##################################################
+[11:41:04] INFO BEProgMissionLogger | Simple simulation starting ...
+[11:41:04] INFO BEProgMissionLogger | CompleteMission [name=BE Supaero mission, startDate=2010-09-01T00:00:00.000, endDate=2010-09-08T00:00:00.000, satellite=Pleiades 1A]
+[11:41:04] INFO BEProgMissionLogger | 
+
+Writing VTS outputs, please wait...
+[11:41:05] INFO BEProgMissionLogger | VTS POI file created : ..\Vts-WindowsNT-32bits-3.5.1\Data\BESupaero\Data\BE_Supaero_Target_Sites_POI.txt
+[11:41:06] INFO BEProgMissionLogger | VTS OEM file created : ..\Vts-WindowsNT-32bits-3.5.1\Data\BESupaero\Data\BE_Supaero_Satellite_Trajectory_OEM.txt
+[11:41:43] INFO BEProgMissionLogger | VTS AEM file created : ..\Vts-WindowsNT-32bits-3.5.1\Data\BESupaero\Data\BE_Supaero_Nadir_Pointing_AEM.txt
+[11:42:19] INFO BEProgMissionLogger | VTS AEM file created : ..\Vts-WindowsNT-32bits-3.5.1\Data\BESupaero\Data\BE_Supaero_Cinematic_Plan_AEM.txt
+[11:42:19] INFO BEProgMissionLogger | VTS MEM file created : ..\Vts-WindowsNT-32bits-3.5.1\Data\BESupaero\Data\BE_Supaero_Cinematic_Plan_Events_MEM.txt
+[11:42:19] INFO BEProgMissionLogger | VTS outputs written
+[11:42:19] INFO BEProgMissionLogger | 
+
+Simulation done
+[11:42:19] INFO BEProgMissionLogger | ##################################################
