@@ -11,7 +11,6 @@ import fr.cnes.sirius.patrius.attitudes.AttitudeLeg;
 import fr.cnes.sirius.patrius.attitudes.AttitudeProvider;
 import fr.cnes.sirius.patrius.attitudes.ConstantSpinSlew;
 import fr.cnes.sirius.patrius.attitudes.StrictAttitudeLegsSequence;
-import fr.cnes.sirius.patrius.attitudes.TargetGroundPointing;
 import fr.cnes.sirius.patrius.events.CodedEvent;
 import fr.cnes.sirius.patrius.events.CodedEventsLogger;
 import fr.cnes.sirius.patrius.events.GenericCodingEventDetector;
@@ -37,10 +36,6 @@ import reader.Site;
 import utils.ConstantsBE;
 import utils.LogUtils;
 import utils.ProjectUtils;
-import java.util.Map;
-import java.util.HashMap;
-import java.lang.Math;
-import fr.cnes.sirius.patrius.bodies.GeodeticPoint;
 
 /**
  * This class implements the context of an Earth Observation mission.
@@ -144,7 +139,7 @@ public class CompleteMission extends SimpleMission {
 		 * Create access plan by combining the access timeline of every site
 		 */
 		
-		for (int i=0; i<this.getSiteList().size(); i+=1) {
+		for (i=0, i<this.getSiteList().size(); i+=1) {
 		    final Site targetSite = this.getSiteList().get(i);
 		    final Timeline siteAccessTimeline = createSiteAccessTimeline(targetSite);
 			this.accessPlan.put(targetSite, siteAccessTimeline);
@@ -461,8 +456,7 @@ public class CompleteMission extends SimpleMission {
 	    final Timeline timelineIllumination = createSiteIlluminationTimeline(targetSite);
 	    final Timeline timelineDazzling = createSiteDazzlingTimeline(targetSite);
 
-	    
-	    // Create empty timeline
+		// Create empty timeline
 		final Timeline siteAccessTimeline = new Timeline(
 				new AbsoluteDateInterval(this.getStartDate(), this.getEndDate()));
 		
@@ -476,28 +470,22 @@ public class CompleteMission extends SimpleMission {
 		for (final Phenomenon phenom : timelineDazzling.getPhenomenaList()) {
 			siteAccessTimeline.addPhenomenon(phenom);
 		}
-		
-		// Print timelines to check if illumination, dazzling and visibility works well
-		ProjectUtils.printTimeline(timelineIllumination);
-		ProjectUtils.printTimeline(timelineDazzling);
-		ProjectUtils.printTimeline(timelineVisibility);
 
 		// Filter the empty timeline, the names of the criterion have to match those defined in createSiteXTimeline()
-		AndCriterion criterionVisibilityandIllumination = new AndCriterion("Visibility", "Illumination",
+		final AndCriterion criterionVisibilityandIllumination = new AndCriterion("Visibility", "Illumination",
 				"Visibility and Illumination", "Comment about this phenomenon");
 		criterionVisibilityandIllumination.applyTo(siteAccessTimeline);
-
 		
-		AndCriterion criterionVisibilityIlluminationNodazzle = new AndCriterion("Visibility and Illumination", "No Dazzling",
-				"Visi and Illu and No Dazz", "all constraints OK");
+		final AndCriterion criterionVisibilityIlluminationNodazzle = new AndCriterion("Visibility and Illumination", "No Dazzling",
+				"Visibility, Illumination and No Dazzling", "Comment about this phenomenon");
 		criterionVisibilityIlluminationNodazzle.applyTo(siteAccessTimeline);
 
-		
-		final ElementTypeFilter obsConditionFilter = new ElementTypeFilter("Visi and Illu and No Dazz", false);
+		final ElementTypeFilter obsConditionFilter = new ElementTypeFilter("Visibility, Illumination and No Dazzling", false);
 		obsConditionFilter.applyTo(siteAccessTimeline);
 
 		// Log the final access timeline associated to the current target
 		logger.info("\n" + targetSite.getName());
+		ProjectUtils.printTimeline(siteAccessTimeline);
 
 		return siteAccessTimeline;
 	}
@@ -655,19 +643,6 @@ public class CompleteMission extends SimpleMission {
 
 		return phenomenonXTimeline;
 	}
-	
-	/**
-	 * 
-	 * This method should compute a {@link Timeline} object which encapsulates all
-	 * the {@link Phenomenon} corresponding to the Visibility phenomenon relative to
-	 * the input target {@link Site}.
-	 * 
-	 * @param targetSite Input target {@link Site}
-	 * @return The {@link Timeline} containing all the {@link Phenomenon} relative
-	 *         to the visibility phenomenon to monitor.
-	 * @throws PatriusException If a {@link PatriusException} occurs when creating
-	 *                          the {@link Timeline}.
-	 */
 	private Timeline createSiteVisibilityTimeline(Site targetSite) throws PatriusException {
 
 		// Create the visibility detector.
@@ -694,7 +669,6 @@ public class CompleteMission extends SimpleMission {
 
 		return phenomenonVisibilityTimeline;
 	}
-	
 	
 	private Timeline createSiteIlluminationTimeline(Site targetSite) throws PatriusException {
 
@@ -823,35 +797,32 @@ public class CompleteMission extends SimpleMission {
 		 * On créer le modèle de détecteur conformement à la doc java sur SensorModel
 		 * PB on n'utilise pas POINTING_CAPACITY comme dans l'énoncé
 		 */
-		/**
-		 * We create a Sensor Model for our satellite.
-		 */
 		Assembly assembly = getSatellite().getAssembly();
 		String name = Satellite.SENSOR_NAME;
 		
 		SensorModel model_1 = new SensorModel(assembly,name);
 		
-		/**
-		 * We add the earth as a masking body.
+		/*
+		 * On ajoute la Terre comme masque
 		 */
 		model_1.addMaskingCelestialBody(getEarth());
-			
-		/**
-		 * Compute the coordinates-speed of the site.
-		 */
+		
+		
+		/*Pour utiliser setMainTarget, on doit obtenir les position -vitesse coordinates du site. Donc prendre un site en entrée
+		 * et récupérer ses coordonnées. Pour cela on nous dit dans le tip3 que pour un site, il faut utiliser 
+		 * TopocentricFrame qui vient de l'interface PvCoordinatesProvider
+		*/		
 		TopocentricFrame siteFrame = new TopocentricFrame(getEarth(), site.getPoint(), site.getName());
 		
 		LocalRadiusProvider radius = new ConstantRadiusProvider(0.);
 		
-		/**
-		 * Set the satellite main target to earth. 
-		 */
 		model_1.setMainTarget(siteFrame, radius);
 		
 		SensorVisibilityDetector visibility_det = new SensorVisibilityDetector(model_1,MAXCHECK_EVENTS,TRESHOLD_EVENTS){
 		
-			
-			 
+			/**
+			 * Génère ca automatiquement quand on créer un SensorVisibilityDetector jsp pourquoi
+			 */
 			private static final long serialVersionUID = 1L;
 
 		/*
@@ -879,17 +850,18 @@ public class CompleteMission extends SimpleMission {
 		**/
 		
 		//site_PV comme précédemment avec Topographicframe
+		TopocentricFrame site_PV = new TopocentricFrame(getEarth(), site.getPoint(), site.getName());
 		
-		TopocentricFrame targetSiteFrame = new TopocentricFrame(getEarth(),site.getPoint(),site.getName());
-		
-		ThreeBodiesAngleDetector illumination_det = new ThreeBodiesAngleDetector(
+		/*Pour Earth et Sun, ca marche avec getEarth() et getSun()...Besoin d'utiliser Abstract
+		* CelestialBody? Est ce que getEarth et getSun renvoie bien des coordonnées?
+		*/
+		ThreeBodiesAngleDetector illumination_det = new ThreeBodiesAngleDetector(site_PV,
 				getEarth(),
-				targetSiteFrame, 
-				getSun(), 
-				Math.PI-ConstantsBE.MAX_SUN_INCIDENCE_ANGLE*Math.PI/180,
+				getSun(),
+				ConstantsBE.MAX_SUN_INCIDENCE_ANGLE,
 				MAXCHECK_EVENTS,
-				TRESHOLD_EVENTS){
-			 
+				TRESHOLD_EVENTS) {
+			
 			private static final long serialVersionUID = 1L;
 			
 			@Override
@@ -918,8 +890,6 @@ public class CompleteMission extends SimpleMission {
 		
 		//site_PV comme précédemment avec Topographicframe
 		TopocentricFrame site_PV = new TopocentricFrame(getEarth(), site.getPoint(), site.getName());
-		TopocentricFrame targetSiteFrame = new TopocentricFrame(getEarth(),site.getPoint(),site.getName());
-
 		
 		//Pour le satellite on utilise un KeplerianPropagator créer dans SimpleMission
 		//createDefaultPropagator
@@ -927,7 +897,7 @@ public class CompleteMission extends SimpleMission {
 		ThreeBodiesAngleDetector dazzling_det = new ThreeBodiesAngleDetector(site_PV,
 					createDefaultPropagator(),
 					getSun(),
-					ConstantsBE.MAX_SUN_PHASE_ANGLE*Math.PI/180,
+					ConstantsBE.MAX_SUN_PHASE_ANGLE,
 					MAXCHECK_EVENTS,
 					TRESHOLD_EVENTS) {
 					
@@ -976,10 +946,7 @@ public class CompleteMission extends SimpleMission {
 		/*
 		 * Complete the code below to create your observation law and return it
 		 */
-		
-		TargetGroundPointing attitudelaw= new TargetGroundPointing(target,,,)
-		
-		return attitudelaw;
+		return null;
 	}
 
 	

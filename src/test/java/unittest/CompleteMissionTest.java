@@ -7,11 +7,19 @@ import org.junit.Test;
 import fr.cnes.sirius.patrius.attitudes.AttitudeLawLeg;
 import fr.cnes.sirius.patrius.events.postprocessing.Timeline;
 import fr.cnes.sirius.patrius.utils.exception.PatriusException;
+<<<<<<< HEAD
 import progmission.CompleteMission;
 
 /**
  * This is the test class for the {@link CompleteMission} class. Here you can
  * define all the unit tests you want to test the methods of {@link CompleteMission}.
+=======
+import progmission.CompleteMissionOriginal;
+
+/**
+ * This is the test class for the {@link CompleteMissionOriginal} class. Here you can
+ * define all the unit tests you want to test the methods of {@link CompleteMissionOriginal}.
+>>>>>>> valerie
  * 
  * Before each method you want to write to test a particular aspect of your
  * code, you have to add a @Test tag. This @Test tag indicates to JUnit that the
@@ -34,10 +42,17 @@ public class CompleteMissionTest {
 
 	/**
 	 * Basic unit test to check the right instantiation of the
+<<<<<<< HEAD
 	 * {@link CompleteMission} object.
 	 * 
 	 * @throws PatriusException If a {@link PatriusException} occurs when
 	 *                          instantiating the {@link CompleteMission}.
+=======
+	 * {@link CompleteMissionOriginal} object.
+	 * 
+	 * @throws PatriusException If a {@link PatriusException} occurs when
+	 *                          instantiating the {@link CompleteMissionOriginal}.
+>>>>>>> valerie
 	 */
 	@Test
 	public void testMissionInstantiation() throws PatriusException {
@@ -46,7 +61,11 @@ public class CompleteMissionTest {
 		final String input_name = "BE Supaero mission";
 		final int siteNumber = 10;
 
+<<<<<<< HEAD
 		final CompleteMission mission = new CompleteMission(input_name, siteNumber);
+=======
+		final CompleteMissionOriginal mission = new CompleteMissionOriginal(input_name, siteNumber);
+>>>>>>> valerie
 
 		// Asserting that the number of Sites is the one given in input
 		assertTrue("Site list size don't match !", siteNumber == mission.getSiteList().size());
@@ -67,10 +86,17 @@ public class CompleteMissionTest {
 	 * For example, check that the access plan is not empty, that the
 	 * {@link Timeline} objects it contains are realistic, etc.
 	 * 
+<<<<<<< HEAD
 	 * @param mission {@link CompleteMission} containing the plan to validate.
 	 * @return A boolean indicating the validity of the plan
 	 */
 	private boolean testAccessPlan(CompleteMission mission) {
+=======
+	 * @param mission {@link CompleteMissionOriginal} containing the plan to validate.
+	 * @return A boolean indicating the validity of the plan
+	 */
+	private boolean testAccessPlan(CompleteMissionOriginal mission) {
+>>>>>>> valerie
 		// Implement you own tests here and return the output as a boolean
 		// Of course, the more tests you perform, and the more realistic and specific
 		// are your tests, the more validated your code is !
@@ -83,10 +109,17 @@ public class CompleteMissionTest {
 	 * computation. For example, you can check that the observation plan is not
 	 * empty, that the {@link AttitudeLawLeg} it contains are valid, etc.
 	 * 
+<<<<<<< HEAD
 	 * @param mission {@link CompleteMission} containing the plan to validate.
 	 * @return A boolean indicating the validity of the plan
 	 */
 	private boolean testObservationPlan(CompleteMission mission) {
+=======
+	 * @param mission {@link CompleteMissionOriginal} containing the plan to validate.
+	 * @return A boolean indicating the validity of the plan
+	 */
+	private boolean testObservationPlan(CompleteMissionOriginal mission) {
+>>>>>>> valerie
 		// Implement you own tests here and return the output as a boolean
 		// Of course, the more tests you perform, and the more realistic and specific
 		// are your tests, the more validated your code is !
@@ -100,10 +133,17 @@ public class CompleteMissionTest {
 	 * or that it is valid by using the provided method
 	 * {@link SimpleMission#checkCinematicPlan(StrictAttitudeLegsSequence<AttitudeLeg>)}
 	 * 
+<<<<<<< HEAD
 	 * @param mission {@link CompleteMission} containing the plan to validate.
 	 * @return A boolean indicating the validity of the plan
 	 */
 	private boolean testCinematicPlan(CompleteMission mission) {
+=======
+	 * @param mission {@link CompleteMissionOriginal} containing the plan to validate.
+	 * @return A boolean indicating the validity of the plan
+	 */
+	private boolean testCinematicPlan(CompleteMissionOriginal mission) {
+>>>>>>> valerie
 		// Implement you own tests here and return the output as a boolean
 		// For example by using mission.checkCinematicPlan(mission.getCinematicPlan());
 		// Of course, the more tests you perform, and the more realistic and specific
