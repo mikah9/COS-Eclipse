@@ -475,11 +475,11 @@ public class CompleteMission extends SimpleMission {
 		for (final Phenomenon phenom : timelineDazzling.getPhenomenaList()) {
 			siteAccessTimeline.addPhenomenon(phenom);
 		}
+		
+		// Print timelines to check if illumination, dazzling and visibility works well
 		ProjectUtils.printTimeline(timelineIllumination);
 		ProjectUtils.printTimeline(timelineDazzling);
 		ProjectUtils.printTimeline(timelineVisibility);
-
-
 
 		// Filter the empty timeline, the names of the criterion have to match those defined in createSiteXTimeline()
 		AndCriterion criterionVisibilityandIllumination = new AndCriterion("Visibility", "Illumination",
@@ -488,16 +488,15 @@ public class CompleteMission extends SimpleMission {
 
 		
 		AndCriterion criterionVisibilityIlluminationNodazzle = new AndCriterion("Visibility and Illumination", "No Dazzling",
-				"Visibility and Illumination and No Dazzling", "Comment about this phenomenon");
+				"Visi and Illu and No Dazz", "all constraints OK");
 		criterionVisibilityIlluminationNodazzle.applyTo(siteAccessTimeline);
 
 		
-		final ElementTypeFilter obsConditionFilter = new ElementTypeFilter("Visibility and Illumination and No Dazzling", false);
+		final ElementTypeFilter obsConditionFilter = new ElementTypeFilter("Visi and Illu and No Dazz", false);
 		obsConditionFilter.applyTo(siteAccessTimeline);
 
 		// Log the final access timeline associated to the current target
 		logger.info("\n" + targetSite.getName());
-		ProjectUtils.printTimeline(siteAccessTimeline);
 
 		return siteAccessTimeline;
 	}
@@ -880,11 +879,11 @@ public class CompleteMission extends SimpleMission {
 		
 		//site_PV comme précédemment avec Topographicframe
 		
-		TopocentricFrame site_PV = new TopocentricFrame(getEarth(),site.getPoint(),site.getName());
+		TopocentricFrame targetSiteFrame = new TopocentricFrame(getEarth(),site.getPoint(),site.getName());
 		
 		ThreeBodiesAngleDetector illumination_det = new ThreeBodiesAngleDetector(
 				getEarth(),
-				site_PV, 
+				targetSiteFrame, 
 				getSun(), 
 				Math.PI-ConstantsBE.MAX_SUN_INCIDENCE_ANGLE*Math.PI/180,
 				MAXCHECK_EVENTS,
@@ -918,6 +917,8 @@ public class CompleteMission extends SimpleMission {
 		
 		//site_PV comme précédemment avec Topographicframe
 		TopocentricFrame site_PV = new TopocentricFrame(getEarth(), site.getPoint(), site.getName());
+		TopocentricFrame targetSiteFrame = new TopocentricFrame(getEarth(),site.getPoint(),site.getName());
+
 		
 		//Pour le satellite on utilise un KeplerianPropagator créer dans SimpleMission
 		//createDefaultPropagator
