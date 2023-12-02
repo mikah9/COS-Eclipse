@@ -852,19 +852,30 @@ public class CompleteMission extends SimpleMission {
 		/*
 		 * Complete the code below to create your observation law and return it
 		 */
+<<<<<<< HEAD
 		
 		/**
 		 * Référentiel pour avoir l'attitude du satellite lorsqu'il pointe le site à n'importe quelle date
 		 */
 		AttitudeLaw SatAttitude = new TargetGroundPointing(
+=======
+		TargetGroundPointing SatAttitude = new TargetGroundPointing(
+>>>>>>> 9d3dda702614d8d76b855ff1215eb11b451f00a3
 				getEarth(),
 				target.getPoint(),
 				this.getSatellite().getSensorAxis(),
 				this.getSatellite().getFrameXAxis()
+<<<<<<< HEAD
 				);
 		
 		return SatAttitude;
 			}
+=======
+				
+				)
+		return SatAttitude;
+	}
+>>>>>>> 9d3dda702614d8d76b855ff1215eb11b451f00a3
 
 	
 	

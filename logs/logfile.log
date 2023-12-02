@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [11:24:22] INFO BEProgMissionLogger | ##################################################
 [11:24:24] INFO BEProgMissionLogger | Complete simulation starting ...
 [11:24:24] INFO BEProgMissionLogger | CompleteMission [name=BE Supaero mission, startDate=2010-09-01T00:00:00.000, endDate=2010-09-08T00:00:00.000, satellite=Pleiades 1A]
@@ -1507,3 +1508,85 @@ Writing VTS outputs, please wait...
 Simulation done
 [11:32:35] INFO BEProgMissionLogger | ##################################################
 >>>>>>> valerie
+=======
+[12:21:11] INFO BEProgMissionLogger | ##################################################
+[12:21:13] INFO BEProgMissionLogger | Complete simulation starting ...
+[12:21:13] INFO BEProgMissionLogger | CompleteMission [name=BE Supaero mission, startDate=2010-09-01T00:00:00.000, endDate=2010-09-08T00:00:00.000, satellite=Pleiades 1A]
+[12:21:26] INFO BEProgMissionLogger | ____ Printing Timeline ____
+[12:21:26] INFO BEProgMissionLogger | Illumination [ 2010-09-01T06:44:06.914 (UTC) ; 2010-09-01T16:56:31.075 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Illumination [ 2010-09-02T06:45:27.630 (UTC) ; 2010-09-02T16:54:31.896 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Illumination [ 2010-09-03T06:46:48.907 (UTC) ; 2010-09-03T16:52:31.645 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Illumination [ 2010-09-04T06:48:10.756 (UTC) ; 2010-09-04T16:50:30.345 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Illumination [ 2010-09-05T06:49:33.185 (UTC) ; 2010-09-05T16:48:28.021 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Illumination [ 2010-09-06T06:50:56.203 (UTC) ; 2010-09-06T16:46:24.695 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Illumination [ 2010-09-07T06:52:19.817 (UTC) ; 2010-09-07T16:44:20.387 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | ___________________________
+[12:21:26] INFO BEProgMissionLogger | ____ Printing Timeline ____
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-08-31T23:59:26.000 (UTC) ; 2010-09-01T02:53:49.740 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-01T03:18:33.327 (UTC) ; 2010-09-01T04:23:33.349 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-01T05:07:45.614 (UTC) ; 2010-09-01T05:53:24.636 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-01T06:58:09.162 (UTC) ; 2010-09-01T07:21:34.999 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-01T16:49:16.868 (UTC) ; 2010-09-01T17:20:56.780 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-01T18:18:13.973 (UTC) ; 2010-09-01T19:10:45.803 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-01T19:47:57.696 (UTC) ; 2010-09-01T21:01:12.226 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-01T21:16:19.282 (UTC) ; 2010-09-02T02:05:15.839 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-02T02:07:59.175 (UTC) ; 2010-09-02T03:30:10.178 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-02T04:01:49.803 (UTC) ; 2010-09-02T04:59:44.151 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-02T05:51:34.047 (UTC) ; 2010-09-02T06:28:55.711 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-02T07:47:15.459 (UTC) ; 2010-09-02T07:51:47.744 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-02T15:59:02.582 (UTC) ; 2010-09-02T16:12:09.286 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-02T17:24:39.889 (UTC) ; 2010-09-02T18:05:11.254 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-02T18:53:50.158 (UTC) ; 2010-09-02T19:55:16.563 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-02T20:22:56.052 (UTC) ; 2010-09-03T02:38:31.994 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-03T02:54:13.516 (UTC) ; 2010-09-03T04:06:20.168 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-03T04:45:22.043 (UTC) ; 2010-09-03T05:35:35.740 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-03T06:36:12.378 (UTC) ; 2010-09-03T07:03:35.556 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-03T16:32:27.239 (UTC) ; 2010-09-03T16:58:15.471 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-03T18:00:05.984 (UTC) ; 2010-09-03T18:49:32.112 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-03T19:29:06.355 (UTC) ; 2010-09-03T20:41:22.090 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-03T20:56:15.447 (UTC) ; 2010-09-04T03:13:57.948 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-04T03:38:20.105 (UTC) ; 2010-09-04T04:42:17.257 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-04T05:29:18.054 (UTC) ; 2010-09-04T06:11:00.183 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-04T07:23:23.020 (UTC) ; 2010-09-04T07:35:41.246 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-04T17:07:10.559 (UTC) ; 2010-09-04T17:43:07.585 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-04T18:35:23.777 (UTC) ; 2010-09-04T19:34:24.784 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-04T20:03:42.277 (UTC) ; 2010-09-05T03:49:36.053 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-05T04:22:18.858 (UTC) ; 2010-09-05T05:17:57.164 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-05T06:13:56.600 (UTC) ; 2010-09-05T06:45:38.699 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-05T16:16:48.716 (UTC) ; 2010-09-05T16:34:11.339 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-05T17:42:10.104 (UTC) ; 2010-09-05T18:27:53.623 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-05T19:10:20.948 (UTC) ; 2010-09-05T20:21:06.680 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-05T20:36:22.740 (UTC) ; 2010-09-06T02:59:49.052 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-06T03:12:35.196 (UTC) ; 2010-09-06T04:25:10.609 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-06T05:06:30.221 (UTC) ; 2010-09-06T05:53:12.147 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-06T07:00:24.884 (UTC) ; 2010-09-06T07:18:23.964 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-06T16:50:11.024 (UTC) ; 2010-09-06T17:20:20.756 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-06T18:17:05.838 (UTC) ; 2010-09-06T19:13:08.982 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-06T19:44:34.680 (UTC) ; 2010-09-07T03:33:48.268 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-07T03:58:06.073 (UTC) ; 2010-09-07T05:00:33.033 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-07T05:51:14.487 (UTC) ; 2010-09-07T06:27:45.928 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-07T17:24:31.092 (UTC) ; 2010-09-07T18:05:42.715 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-07T18:51:41.903 (UTC) ; 2010-09-07T20:00:20.495 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | No Dazzling [ 2010-09-07T20:16:42.739 (UTC) ; 2010-09-07T23:59:26.000 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | ___________________________
+[12:21:26] INFO BEProgMissionLogger | ____ Printing Timeline ____
+[12:21:26] INFO BEProgMissionLogger | Visibility [ 2010-09-01T07:08:32.585 (UTC) ; 2010-09-01T07:11:32.657 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visibility [ 2010-09-01T18:18:32.585 (UTC) ; 2010-09-01T18:19:32.280 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visibility [ 2010-09-02T07:47:31.717 (UTC) ; 2010-09-02T07:50:11.001 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visibility [ 2010-09-03T17:57:13.026 (UTC) ; 2010-09-03T18:00:56.114 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visibility [ 2010-09-04T07:28:20.770 (UTC) ; 2010-09-04T07:29:19.424 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visibility [ 2010-09-04T07:32:09.093 (UTC) ; 2010-09-04T07:32:09.094 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visibility [ 2010-09-06T07:10:45.933 (UTC) ; 2010-09-06T07:11:23.868 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visibility [ 2010-09-07T07:50:06.786 (UTC) ; 2010-09-07T07:51:06.705 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visibility [ 2010-09-07T17:20:13.288 (UTC) ; 2010-09-07T17:21:49.574 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | ___________________________
+[12:21:26] INFO BEProgMissionLogger | 
+PARIS
+[12:21:26] INFO BEProgMissionLogger | ____ Printing Timeline ____
+[12:21:26] INFO BEProgMissionLogger | Visi and Illu and No Dazz [ 2010-09-01T07:08:32.585 (UTC) ; 2010-09-01T07:11:32.657 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visi and Illu and No Dazz [ 2010-09-02T07:47:31.717 (UTC) ; 2010-09-02T07:50:11.001 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visi and Illu and No Dazz [ 2010-09-04T07:28:20.770 (UTC) ; 2010-09-04T07:29:19.424 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visi and Illu and No Dazz [ 2010-09-04T07:32:09.093 (UTC) ; 2010-09-04T07:32:09.094 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | Visi and Illu and No Dazz [ 2010-09-06T07:10:45.933 (UTC) ; 2010-09-06T07:11:23.868 (UTC) ]
+[12:21:26] INFO BEProgMissionLogger | ___________________________
+>>>>>>> 9d3dda702614d8d76b855ff1215eb11b451f00a3
